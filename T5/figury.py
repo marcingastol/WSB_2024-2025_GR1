@@ -2,7 +2,7 @@ import math
 
 class Kwadrat:
     def __init__(self,dlugosc_boku):
-        self.dlugosc_boku = dlugosc_boku
+        self.dlugoscboku = dlugosc_boku
 
     def powierzchnia(self):
         return self.dlugosc_boku ** 2
