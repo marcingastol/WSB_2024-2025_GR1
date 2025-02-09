@@ -14,9 +14,13 @@ with sync_playwright() as p:
     # czekamy na przekierowanie do strony
     page.wait_for_url("**/logged-in-successfully/") # czekamy aż URL zawiera logged-in-sccuessfully
 
+    #page_url = page.url
+    assert page.url in "https://practicetestautomation.com/logged-in-successfully/"
+
     # Logged In Successfully
     success_message = "Logged In Successfully"
     message = page.text_content("h1")
+    # page.text_content("text=Your username is invalid!")
     print(f"Zawartosc naglowka to {message}")
 
     assert success_message in message
